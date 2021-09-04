@@ -1,1 +1,10 @@
 /*  */
+
+body{
+    background-color: var(--color-kakao);
+    height: 500vw; /* js */
+}
+
+.world{
+    position: fixed;  /* js */
+}
