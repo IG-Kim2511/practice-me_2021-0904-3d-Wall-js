@@ -1,10 +1,132 @@
-/*  */
+/* animation */
 
-body{
-    background-color: var(--color-kakao);
-    height: 500vw; /* js */
-}
+/*🍀500 character 머리 움직임 */
+@keyframes ani-head {
+    to {
+      transform: rotateX(-10deg);
+    }
+  }
+  
+  /* 🍀530 */
+  @keyframes ani-running-leg {
+    from {
+      transform: rotateX(-30deg);
+    }
+    to {
+      transform: rotateX(30deg);
+    }
+  }
+  @keyframes ani-running-arm {
+    from {
+      transform: rotateY(30deg);
+    }
+    to {
+      transform: rotateY(-30deg);
+    }
+  }
+  
+  /* 🍀 wall */
+  
+  body {
+    height: 500vw; /*🍓410-10. scroll하기위해서 height를 인위적으로 늘림 */
+    font-family: "Apple SD Gothic Neo", "Roboto", "Noto Sans KR", NanumGothic,
+      "Malgun Gothic", sans-serif;
+    -webkit-overflow-scrolling: touch;
+    color: #555;
+    background: #ff7200;
+    transition: background 0.5s;
+  }
+  
+  /* 🍀js 620 */
+  body[data-char="ragirl"] {
+    /* background:  */
+  }
+  
+  /* world */
+  /* 🍀370  */
+  .world {
+    position: fixed; /* 🍓410-10 */
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    perspective: 1000px; /* 🍓370-2  */
+  }
+  .stage {
+    position: absolute; /*  */
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    transform-style: preserve-3d; /* 🍓370-2  */
+    /*  transform: rotateY(0deg);  🍀 450 */
+  }
+  .house {
+    width: 100vw;
+    height: 100vh;
+    transform: translateZ(-490vw); /* 🍓370-2  */ /* js, 🍀420 */
+    transform-style: preserve-3d; /* 🍓370-2  */
+  }
+  .wall {
+    position: absolute; /*  */
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.8);
+  }
+  /* 🍀390 */
+  .wall-left {
+    width: 1000vw;
+    background: #f8f8f8;
+    transform: rotateY(90deg) translateZ(-500vw); /* 🍓370-2  */
+  }
+  .wall-right {
+    width: 1000vw;
+    background: #f8f8f8;
+    transform: rotateY(90deg) translateZ(-400vw); /* 🍓370-2  */
+  }
+  
+  /* 🍀400 */
+  .wall-front-a {
+    transform: translateZ(300vw);
+  }
+  .wall-front-b {
+    transform: translateZ(50vw);
+  }
+  .wall-front-c {
+    transform: translateZ(-200vw);
+  }
+  .wall-front-d {
+    transform: translateZ(-500vw);
+  }
+  
+  /* 🍀380 wall*/
+  .wall-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  .wall-title {
+    font-size: 5rem;
+  }
+  
+  /* 🍀440 .progress-bar */
+  .progress-bar-con {
+    position: fixed; /*  */
+    left: 0;
+    top: 0;
+    z-index: 100; /*  */
+    width: 100vw;
+    height: 5px;
+    background: #555;
+  }
 
-.world{
-    position: fixed;  /* js */
-}
+  .progress-bar{
+      width: 0; /* js */
+      height: 100%;
+      background-color: blueviolet;
+  }
+
+  /* 480 character */
